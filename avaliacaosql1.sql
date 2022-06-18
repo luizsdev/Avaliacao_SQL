@@ -16,6 +16,5 @@ SELECT * FROM produtos WHERE loj_prod = 1 OR loj_prod = 2;
 SELECT max(dt_inclu_prod) AS MaiorData , min(dt_inclu_prod) AS MenorData FROM produtos;
 SELECT count(*) AS QuantidadeRegistros FROM produtos;
 SELECT * FROM produtos WHERE substr(desc_prod,1,1) = "L";
-SELECT sum(preco_prod) AS SomaTotal FROM produtos;
 SELECT sum(preco_prod) AS Total, loj_prod AS Loja FROM produtos GROUP BY loj_prod ;
 select sum(preco_prod) AS Total, loj_prod AS Loja FROM produtos GROUP BY loj_prod HAVING sum(preco_prod) > 100000;
