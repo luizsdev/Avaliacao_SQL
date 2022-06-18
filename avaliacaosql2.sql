@@ -23,6 +23,6 @@ CREATE TABLE produtos(
     FOREIGN KEY(loj_prod) REFERENCES lojas(loj_prod)
 );
 
-SELECT lojas.loj_prod ,lojas.desc_loj,estoque.cod_prod,estoque.qtd_prod,produtos.preco_prod FROM lojas LEFT JOIN estoque ON estoque.loj_prod = lojas.loj_prod LEFT JOIN produtos on produtos.preco_prod;
+SELECT lojas.loj_prod ,lojas.desc_loj,estoque.cod_prod,estoque.qtd_prod,produtos.preco_prod FROM lojas LEFT JOIN estoque ON estoque.loj_prod = lojas.loj_prod LEFT JOIN produtos ON produtos.preco_prod;
 SELECT * FROM produtos LEFT JOIN estoque ON estoque.cod_prod = produtos.cod_prod WHERE estoque.cod_prod != produtos.cod_prod;
 SELECT * FROM estoque LEFT JOIN produtos ON produtos.cod_prod = estoque.cod_prod WHERE produtos.cod_prod != estoque.cod_prod;
