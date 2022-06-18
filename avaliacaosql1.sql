@@ -9,7 +9,6 @@ dt_inclu_prod DATE not null,
 preco_prod decimal(8,3) not null
 );
 
-SELECT * FROM produtos;
 INSERT INTO produtos VALUES (1233,2,'LEITE CONDENSADO MOCOCA','2010-10-30',45.40);
 UPDATE produtos SET preco_prod = 95.40 WHERE cod_prod = 170 AND loj_prod = 2;
 
